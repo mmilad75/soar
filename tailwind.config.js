@@ -16,6 +16,7 @@ export default {
     textColor: {
       base: '#232323',
       subdued: '#B1B1B1',
+      primary: '#343C6A',
     },
     fill: {
       base: '#232323',
@@ -29,6 +30,10 @@ export default {
       },
       width: {
         sidebar: 250,
+      },
+      fontSize: {
+        h1: ['1.75rem', '2.125rem'],
+        h2: ['1.375rem', '1.625rem'],
       },
     },
   },
