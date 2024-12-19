@@ -10,6 +10,7 @@ export default {
       'sky-darker': '#DFEAF2',
     },
     backgroundColor: {
+      base: '#FFFFFF',
       gray: '#F5F7FA',
       dark: '#232323',
     },
@@ -34,6 +35,7 @@ export default {
       fontSize: {
         h1: ['1.75rem', '2.125rem'],
         h2: ['1.375rem', '1.625rem'],
+        h3: ['17px', '1.25rem'],
       },
     },
   },
