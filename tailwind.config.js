@@ -11,6 +11,16 @@ export default {
     },
     backgroundColor: {
       gray: '#F5F7FA',
+      dark: '#232323',
+    },
+    textColor: {
+      base: '#232323',
+      subdued: '#B1B1B1',
+    },
+    fill: {
+      base: '#232323',
+      subdued: '#B1B1B1',
+      inherit: 'inherit',
     },
     extend: {
       height: {
@@ -22,5 +32,11 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /fill-/,
+      variants: ['hover'],
+    },
+  ],
   plugins: [],
 };
