@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Inter;
+  src: url('./assets/fonts/Inter-VariableFont.ttf') format('woff2');
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('./assets/fonts/Inter-Italic-VariableFont.ttf') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+}
