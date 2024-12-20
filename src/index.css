@@ -15,8 +15,28 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: Lato;
+  src: url('./assets/fonts/Lato-Regular.ttf') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./assets/fonts/Lato-Bold.ttf') format('woff2');
+  font-weight: 500 600;
+}
+
 @layer base {
   html {
-    @apply font-sans;
+    @apply font-inter;
   }
+}
+
+.credit-card-bg {
+  background: linear-gradient(107.38deg, #5b5a6f 2.61%, #000000 101.2%);
+}
+
+.card-number-bg {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
 }

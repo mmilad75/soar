@@ -3,7 +3,8 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      inter: ['Inter', 'sans-serif'],
+      lato: ['Lato', 'sans-serif'],
     },
     borderColor: {
       sky: '#E6EFF5',
@@ -18,6 +19,8 @@ export default {
       base: '#232323',
       subdued: '#B1B1B1',
       primary: '#343C6A',
+      secondary: '#718EBF',
+      light: '#FFFFFF',
     },
     fill: {
       base: '#232323',
@@ -36,6 +39,9 @@ export default {
         h1: ['1.75rem', '2.125rem'],
         h2: ['1.375rem', '1.625rem'],
         h3: ['17px', '1.25rem'],
+      },
+      borderRadius: {
+        '25px': 25,
       },
     },
   },
