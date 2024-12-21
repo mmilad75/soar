@@ -9,12 +9,12 @@ export interface ICreditCard {
   active: boolean;
 }
 
-interface FetchCardsResponse {
+interface IFetchCardsResponse {
   cards: ICreditCard[];
   meta: { total: number };
 }
 
-type FetchCards = (start: number, limit: number) => Promise<FetchCardsResponse>;
+type FetchCards = (start: number, limit: number) => Promise<IFetchCardsResponse>;
 
 const fetchCards: FetchCards = async (start: number, limit: number) => {
   const params = { start, limit };

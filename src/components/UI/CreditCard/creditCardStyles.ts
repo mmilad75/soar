@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 
-export const creditCardStyles = (active: boolean) => {
+export const creditCardStyles = (active: boolean, className?: string) => {
   return {
     wrapper: classNames(
-      'font-lato w-[350px] rounded-25px',
+      'font-lato rounded-25px',
       active && 'credit-card-bg text-light',
-      !active && 'text-secondary bg-base border border-sky-darker'
+      !active && 'text-secondary bg-base border border-sky-darker',
+      className
     ),
     topBar: 'flex items-center justify-between mb-8',
     balance: classNames('text-xl font-semibold leading-6', !active && 'text-primary'),
