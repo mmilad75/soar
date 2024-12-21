@@ -1,5 +1,9 @@
 const PageContent: React.FC<React.PropsWithChildren> = ({ children }) => {
-  return <section className="h-content py-6 px-10 bg-gray overflow-y-auto">{children}</section>;
+  return (
+    <section className="bg-gray overflow-y-auto">
+      <main className="h-content max-w-content py-6 px-10 mx-auto">{children}</main>
+    </section>
+  );
 };
 
 export default PageContent;

@@ -35,6 +35,9 @@ export default {
       width: {
         sidebar: 250,
       },
+      maxWidth: {
+        content: 1180,
+      },
       fontSize: {
         h1: ['1.75rem', '2.125rem'],
         h2: ['1.375rem', '1.625rem'],
