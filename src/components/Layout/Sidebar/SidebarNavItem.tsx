@@ -1,4 +1,6 @@
 import { Icon, IconName } from '@/components/UI';
+import { useAppDispatch } from '@/store/hooks';
+import { closeSidebar } from '@/store/slices/uiSlice';
 import classNames from 'classnames';
 import { NavLink } from 'react-router';
 
@@ -10,6 +12,12 @@ export interface ISidebarNavItemProps {
 }
 
 const SidebarNavItem: React.FC<ISidebarNavItemProps> = ({ title, icon, to, isActive }) => {
+  const dispatch = useAppDispatch();
+
+  const onCloseSidebar = () => {
+    dispatch(closeSidebar());
+  };
+
   const linkClassNames = classNames(
     'relative group transition',
     'flex items-center',
@@ -24,7 +32,7 @@ const SidebarNavItem: React.FC<ISidebarNavItemProps> = ({ title, icon, to, isAct
   );
 
   return (
-    <NavLink to={to} className={linkClassNames}>
+    <NavLink to={to} className={linkClassNames} onClick={onCloseSidebar}>
       <Icon className="mr-6" name={icon} size={25} />
       <span className="font-medium text-lg leading-none	">{title}</span>
       <span className={indicatorClassNames}></span>

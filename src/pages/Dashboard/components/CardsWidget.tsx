@@ -1,13 +1,14 @@
 import { CreditCard, Widget } from '@/components/UI';
-import { AppDispatch, RootState } from '@/store';
+import { RootState } from '@/store';
+import { useAppDispatch } from '@/store/hooks/useAppDispatch';
 import { fetchCards } from '@/store/slices/creditCardsSlice';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router';
 
 const CardsWidget: React.FC = () => {
   const { cards } = useSelector((state: RootState) => state.creditCards);
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchCards({ start: 0, limit: 2 }));
@@ -24,7 +25,7 @@ const CardsWidget: React.FC = () => {
       <div className="flex">
         {cards.map(({ id, balance, active, ...card }) => (
           <div key={id} className="mr-4 last:mr-0">
-            <CreditCard className="w-[350px]" balance={balance} card={card} active={active} />
+            <CreditCard balance={balance} card={card} active={active} />
           </div>
         ))}
       </div>
