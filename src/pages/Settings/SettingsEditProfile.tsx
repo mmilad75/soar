@@ -68,7 +68,13 @@ const SettingsEditProfile: React.FC = () => {
               {...register('password', { required: 'Email is required' })}
             />
 
-            <TextInput label="Date of Birth" placeholder="Date of Birth" error={errors.dob} {...register('dob')} />
+            <TextInput
+              type="date"
+              label="Date of Birth"
+              placeholder="Date of Birth"
+              error={errors.dob}
+              {...register('dob')}
+            />
 
             <TextInput
               label="Present Address"
