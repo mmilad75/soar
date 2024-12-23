@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import creditCardsReducer from './slices/creditCardsSlice';
 import transactionsReducer from './slices/transactionsSlice';
 import reportsReducer from './slices/reportsSlice';
+import contactsReducer from './slices/contactsSlice';
 import uiReducer from './slices/uiSlice';
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     creditCards: creditCardsReducer,
     transactions: transactionsReducer,
     reports: reportsReducer,
+    contacts: contactsReducer,
     ui: uiReducer,
   },
 });

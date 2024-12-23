@@ -2,6 +2,7 @@ import { http, HttpResponse } from 'msw';
 import { cards } from './data/cards';
 import { transactions } from './data/transactions';
 import { balanceHistory, expenseStatistics, weeklyActivity } from './data/reports';
+import { frequentContacts } from './data/contacts';
 
 export const handlers = [
   http.get('https://soar-api/credit-cards', ({ request }) => {
@@ -62,6 +63,16 @@ export const handlers = [
     return HttpResponse.json(
       {
         data: balanceHistory,
+      },
+      {
+        status: 200,
+      }
+    );
+  }),
+  http.get('https://soar-api/contacts/frequent', () => {
+    return HttpResponse.json(
+      {
+        contacts: frequentContacts,
       },
       {
         status: 200,

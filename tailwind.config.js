@@ -20,6 +20,7 @@ export default {
         paypal: '#E7EDFF',
         cash: '#DCFAF8',
       },
+      sky: '#EDF1F7',
     },
     textColor: {
       base: '#232323',
@@ -31,17 +32,23 @@ export default {
       danger: '#FF4B4A',
     },
     fill: {
+      none: 'none',
       base: '#232323',
       subdued: '#B1B1B1',
       inherit: 'inherit',
       primary: '#343C6A',
       secondary: '#718EBF',
+      light: '#FFFFFF',
       payment: {
         card: '#FFBB38',
         paypal: '#396AFF',
         cash: '#16DBCC',
       },
     },
+    stroke: {
+      secondary: '#718EBF',
+    },
+
     screens: {
       sm: '576px',
       md: '768px',
@@ -64,14 +71,10 @@ export default {
       },
       borderRadius: {
         '25px': 25,
+        '50px': 50,
       },
     },
   },
-  safelist: [
-    {
-      pattern: /fill-/,
-      variants: ['hover'],
-    },
-  ],
+  safelist: [],
   plugins: [],
 };

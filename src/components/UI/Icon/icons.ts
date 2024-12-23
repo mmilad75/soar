@@ -8,9 +8,11 @@ import EconometricsIcon from '@/assets/icons/econometrics.svg?react';
 import InvestmentIcon from '@/assets/icons/investment.svg?react';
 import ServiceIcon from '@/assets/icons/service.svg?react';
 import MenuIcon from '@/assets/icons/menu.svg?react';
-import CashPayment from '@/assets/icons/cash-payment.svg?react';
-import PaypalPayment from '@/assets/icons/paypal-payment.svg?react';
-import CardPayment from '@/assets/icons/card-payment.svg?react';
+import CashPaymentIcon from '@/assets/icons/cash-payment.svg?react';
+import PaypalPaymentIcon from '@/assets/icons/paypal-payment.svg?react';
+import CardPaymentIcon from '@/assets/icons/card-payment.svg?react';
+import ArrowRightIcon from '@/assets/icons/arrow-right.svg?react';
+import SendIcon from '@/assets/icons/send.svg?react';
 
 export const icons = {
   creditCard: CreditCardIcon,
@@ -23,9 +25,11 @@ export const icons = {
   transfer: TransferIcon,
   user: UserIcon,
   service: ServiceIcon,
-  cash: CashPayment,
-  paypal: PaypalPayment,
-  cardStack: CardPayment,
+  cash: CashPaymentIcon,
+  paypal: PaypalPaymentIcon,
+  cardStack: CardPaymentIcon,
+  arrowRight: ArrowRightIcon,
+  send: SendIcon,
 };
 
 export type IconName = keyof typeof icons;

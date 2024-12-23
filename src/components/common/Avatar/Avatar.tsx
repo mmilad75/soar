@@ -12,8 +12,8 @@ const Avatar: React.FC<IAvatarProps> = ({ src, size = 'medium', className }) => 
       className={classNames(
         'inline-block rounded-full',
         size === 'medium' && 'w-[35px] h-[35px] lg:w-[60px] lg:h-[60px]',
-        size === 'large' && 'w-[50 px] h-[50 px] lg:w-[70px] lg:h-[70px]',
-        size === 'xLarge' && 'w-[90 px] h-[90 px] lg:w-[100px] lg:h-[100px]',
+        size === 'large' && 'w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]',
+        size === 'xLarge' && 'w-[90px] h-[90px] lg:w-[100px] lg:h-[100px]',
         className
       )}
     >
