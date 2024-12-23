@@ -8,22 +8,22 @@ import WeeklyActivityWidget from './components/WeeklyActivityWidget';
 const Dashboard: React.FC = () => {
   return (
     <div className="lg:grid grid-cols-12 gap-y-6 gap-x-7 ">
-      <div className="col-span-8">
+      <div className="mb-6 lg:mb-0 col-span-8">
         <CardsWidget />
       </div>
-      <div className="col-span-4">
+      <div className="mb-6 lg:mb-0 col-span-4">
         <TransactionsWidget />
       </div>
-      <div className="col-span-8">
+      <div className="mb-6 lg:mb-0 col-span-8">
         <WeeklyActivityWidget />
       </div>
-      <div className="col-span-4">
+      <div className="mb-6 lg:mb-0 col-span-4">
         <ExpenseStatisticsWidget />
       </div>
-      <div className="col-span-5">
+      <div className="mb-6 lg:mb-0 col-span-5">
         <QuickTransferWidget />
       </div>
-      <div className="col-span-7">
+      <div className="mb-6 lg:mb-0 col-span-7">
         <BalanceHistoryWidget />
       </div>
     </div>
