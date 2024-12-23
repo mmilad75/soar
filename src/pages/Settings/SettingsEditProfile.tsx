@@ -1,6 +1,8 @@
 import { Avatar } from '@/components/common';
 import { TextInput } from '@/components/Form';
+import { RootState } from '@/store';
 import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 
 type ProfileFormData = {
   fullName: string;
@@ -16,11 +18,13 @@ type ProfileFormData = {
 };
 
 const SettingsEditProfile: React.FC = () => {
+  const { user } = useSelector((state: RootState) => state.auth);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<ProfileFormData>();
+  } = useForm<ProfileFormData>({ defaultValues: user ?? {} });
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
@@ -59,14 +63,7 @@ const SettingsEditProfile: React.FC = () => {
               {...register('email', { required: 'Email is required' })}
             />
 
-            <TextInput
-              label="Email"
-              placeholder="Email"
-              error={errors.password}
-              type="password"
-              required
-              {...register('password', { required: 'Email is required' })}
-            />
+            <TextInput label="Password" placeholder="Password" error={errors.password} {...register('password')} />
 
             <TextInput
               type="date"

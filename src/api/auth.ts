@@ -15,7 +15,7 @@ export interface IUserInfo {
 }
 
 interface IFetchUserResponse {
-  user: IUserInfo[];
+  user: IUserInfo;
 }
 
 type FetchUser = () => Promise<IFetchUserResponse>;

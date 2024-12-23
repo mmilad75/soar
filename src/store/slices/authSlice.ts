@@ -10,7 +10,7 @@ export const fetchUser = createAsyncThunk('transactions/fetchUser', async () => 
 });
 
 export interface IAuthState {
-  user: null | IUserInfo[];
+  user: null | IUserInfo;
   loading: boolean;
 }
 
