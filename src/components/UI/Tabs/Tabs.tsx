@@ -16,7 +16,7 @@ const Tabs: React.FC<ITabsProps> = ({ tabs }) => {
     <div>
       <div className="flex border-b border-sky">
         {tabs.map((tab, index) => (
-          <TabTitle title={tab.title} active={activeTab === index} onClick={() => setActiveTab(index)} />
+          <TabTitle key={index} title={tab.title} active={activeTab === index} onClick={() => setActiveTab(index)} />
         ))}
       </div>
       <div key={activeTab} className="mt-10 animate-fade-in">

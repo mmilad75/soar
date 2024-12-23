@@ -9,6 +9,7 @@ export default {
     borderColor: {
       sky: '#E6EFF5',
       'sky-darker': '#DFEAF2',
+      danger: '#FF4B4A',
     },
     backgroundColor: {
       base: '#FFFFFF',
@@ -21,6 +22,7 @@ export default {
         cash: '#DCFAF8',
       },
       sky: '#EDF1F7',
+      primary: '#343C6A',
     },
     textColor: {
       base: '#232323',
@@ -30,6 +32,9 @@ export default {
       light: '#FFFFFF',
       success: '#41D4A8',
       danger: '#FF4B4A',
+    },
+    placeholderColor: {
+      base: '#a0abbd',
     },
     fill: {
       none: 'none',
@@ -68,8 +73,10 @@ export default {
         h1: ['1.75rem', '2.125rem'],
         h2: ['1.375rem', '1.625rem'],
         h3: ['17px', '1.25rem'],
+        input: ['15px', '18px'],
       },
       borderRadius: {
+        '15px': 15,
         '25px': 25,
         '50px': 50,
       },
