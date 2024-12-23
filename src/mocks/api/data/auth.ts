@@ -2,9 +2,9 @@ import { IUserInfo } from '@/api/auth';
 
 export const userProfile: IUserInfo = {
   id: 'userid',
-  fullName: 'Milad Sanati',
-  username: 'miladsanati',
-  email: 'mmiladsanati@gmail.com',
+  fullName: 'Christina',
+  username: 'christina',
+  email: 'christina@gmail.com',
   presentAddress: '',
   permanentAddress: '',
   city: '',

@@ -3,8 +3,12 @@ import PageTitle from './PageTitle';
 import { useAppDispatch } from '@/store/hooks';
 import { openSidebar } from '@/store/slices/uiSlice';
 import { Avatar } from '@/components/common';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store';
 
 const Header: React.FC = () => {
+  const { user } = useSelector((state: RootState) => state.auth);
+
   const dispatch = useAppDispatch();
 
   const onOpenSidebar = () => {
@@ -22,7 +26,7 @@ const Header: React.FC = () => {
 
       <PageTitle />
       <div>
-        <Avatar size="medium" src="/images/christina.jpg" />
+        <Avatar size="medium" src={user?.avatar ?? ''} />
       </div>
     </header>
   );
