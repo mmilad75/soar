@@ -7,6 +7,7 @@ import LoanIcon from '@/assets/icons/loan.svg?react';
 import EconometricsIcon from '@/assets/icons/econometrics.svg?react';
 import InvestmentIcon from '@/assets/icons/investment.svg?react';
 import ServiceIcon from '@/assets/icons/service.svg?react';
+import MenuIcon from '@/assets/icons/menu.svg?react';
 
 export const icons = {
   creditCard: CreditCardIcon,
@@ -14,6 +15,7 @@ export const icons = {
   home: HomeIcon,
   investment: InvestmentIcon,
   loan: LoanIcon,
+  menu: MenuIcon,
   settings: SettingsIcon,
   transfer: TransferIcon,
   user: UserIcon,

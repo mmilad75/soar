@@ -14,6 +14,7 @@ export default {
       base: '#FFFFFF',
       gray: '#F5F7FA',
       dark: '#232323',
+      backdrop: '#00000036',
     },
     textColor: {
       base: '#232323',
@@ -26,6 +27,15 @@ export default {
       base: '#232323',
       subdued: '#B1B1B1',
       inherit: 'inherit',
+      primary: '#343C6A',
+      secondary: '#718EBF',
+    },
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1180px',
+      xxl: '1400px',
     },
     extend: {
       height: {
@@ -34,9 +44,6 @@ export default {
       },
       width: {
         sidebar: 250,
-      },
-      maxWidth: {
-        content: 1180,
       },
       fontSize: {
         h1: ['1.75rem', '2.125rem'],

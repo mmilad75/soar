@@ -12,7 +12,7 @@ const PageTitle: React.FC = () => {
     return location.pathname.substring(1);
   }, [location.pathname]);
 
-  return <h1 className="text-primary text-h1 font-semibold capitalize">{pageTitle}</h1>;
+  return <h1 className="text-primary text-xl xl:text-h1 font-semibold capitalize">{pageTitle}</h1>;
 };
 
 export default PageTitle;
