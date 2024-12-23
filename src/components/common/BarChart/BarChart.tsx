@@ -56,8 +56,9 @@ const BarChart: React.FC<IBarChartProps> = ({ data, height = 150 }) => {
         />
 
         <VictoryGroup offset={20} style={{ data: { width: 10 } }}>
-          {data.map(({ color, values }) => (
+          {data.map(({ color, values, label }) => (
             <VictoryBar
+              key={label}
               style={{ data: { fill: color, stroke: color, fillOpacity: 1 } }}
               data={values}
               cornerRadius={{

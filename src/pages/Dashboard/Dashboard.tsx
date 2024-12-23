@@ -1,3 +1,4 @@
+import BalanceHistoryWidget from './components/BalanceHistoryWidget';
 import CardsWidget from './components/CardsWidget';
 import ExpenseStatisticsWidget from './components/ExpenseStatisticsWidget';
 import TransactionsWidget from './components/TransactionsWidget';
@@ -17,6 +18,9 @@ const Dashboard: React.FC = () => {
       </div>
       <div className="col-span-3 lg:col-span-1">
         <ExpenseStatisticsWidget />
+      </div>
+      <div className="col-span-3 lg:col-span-2">
+        <BalanceHistoryWidget />
       </div>
     </div>
   );

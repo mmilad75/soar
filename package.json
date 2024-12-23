@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@d3fc/d3fc-discontinuous-scale": "^4.1.1",
     "@reduxjs/toolkit": "^2.5.0",
     "axios": "^1.7.9",
     "classnames": "^2.5.1",
+    "d3-scale": "^4.0.2",
     "dayjs": "^1.11.13",
     "react": "19.0.0",
     "react-dom": "19.0.0",
