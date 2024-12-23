@@ -15,6 +15,11 @@ export default {
       gray: '#F5F7FA',
       dark: '#232323',
       backdrop: '#00000036',
+      payment: {
+        card: '#FFF5D9',
+        paypal: '#E7EDFF',
+        cash: '#DCFAF8',
+      },
     },
     textColor: {
       base: '#232323',
@@ -22,6 +27,8 @@ export default {
       primary: '#343C6A',
       secondary: '#718EBF',
       light: '#FFFFFF',
+      success: '#41D4A8',
+      danger: '#FF4B4A',
     },
     fill: {
       base: '#232323',
@@ -29,6 +36,11 @@ export default {
       inherit: 'inherit',
       primary: '#343C6A',
       secondary: '#718EBF',
+      payment: {
+        card: '#FFBB38',
+        paypal: '#396AFF',
+        cash: '#16DBCC',
+      },
     },
     screens: {
       sm: '576px',
