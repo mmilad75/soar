@@ -2,6 +2,7 @@ import { Icon } from '@/components/UI';
 import PageTitle from './PageTitle';
 import { useAppDispatch } from '@/store/hooks';
 import { openSidebar } from '@/store/slices/uiSlice';
+import { Avatar } from '@/components/common';
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -20,7 +21,9 @@ const Header: React.FC = () => {
       </button>
 
       <PageTitle />
-      <div>R</div>
+      <div>
+        <Avatar size="medium" src="/images/christina.jpg" />
+      </div>
     </header>
   );
 };
