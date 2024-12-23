@@ -73,6 +73,18 @@ export default {
         '25px': 25,
         '50px': 50,
       },
+      padding: {
+        7.5: '1.875rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-in',
+      },
+      keyframes: () => ({
+        fadeIn: {
+          from: { visibility: 'hidden', opacity: 0 },
+          to: { visibility: 'visible', opacity: 1 },
+        },
+      }),
     },
   },
   safelist: [],
