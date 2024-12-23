@@ -11,10 +11,11 @@ interface ICreditCardProps {
   };
   balance: number;
   active?: boolean;
+  className?: string;
 }
 
-const CreditCard: React.FC<ICreditCardProps> = ({ card, balance, active = false }) => {
-  const styles = creditCardStyles(active);
+const CreditCard: React.FC<ICreditCardProps> = ({ card, balance, active = false, className }) => {
+  const styles = creditCardStyles(active, className);
 
   const formattedCardNumber = card.cardNumber
     .replace(/\s/g, '')
