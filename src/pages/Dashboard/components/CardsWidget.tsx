@@ -1,4 +1,5 @@
-import { CreditCard, Widget } from '@/components/UI';
+import { CreditCard } from '@/components/common';
+import { Widget } from '@/components/UI';
 import { RootState } from '@/store';
 import { useAppDispatch } from '@/store/hooks/useAppDispatch';
 import { fetchCards } from '@/store/slices/creditCardsSlice';
