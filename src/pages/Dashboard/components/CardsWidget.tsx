@@ -23,9 +23,9 @@ const CardsWidget: React.FC = () => {
 
   return (
     <Widget title="My Cards" extra={seeAllButton} transparent>
-      <div className="flex">
+      <div className="flex overflow-y-auto w-[calc(100vw_-_40px)] pr-10 lg:w-auto lg:pr-0">
         {cards.map(({ id, balance, active, ...card }) => (
-          <div key={id} className="flex-grow mr-4 last:mr-0">
+          <div key={id} className="shrink-0 lg:flex-grow mr-4 last:mr-0">
             <CreditCard balance={balance} card={card} active={active} />
           </div>
         ))}
