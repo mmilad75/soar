@@ -1,4 +1,4 @@
-import reportsApi, { IExpenseStatistics, IWeeklyActivity } from '@/api/reports';
+import reportsApi, { IBalanceHistory, IExpenseStatistics, IWeeklyActivity } from '@/api/reports';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchWeeklyActivity = createAsyncThunk('reports/fetchWeeklyActivity', async () => {
@@ -13,14 +13,22 @@ export const fetchExpenseStatistics = createAsyncThunk('reports/fetchExpenseStat
   return data;
 });
 
+export const fetchBalanceHistory = createAsyncThunk('reports/fetchBalanceHistory', async () => {
+  const { data } = await reportsApi.fetchBalanceHistory();
+
+  return data;
+});
+
 export interface IReportsState {
   weeklyActivity: IWeeklyActivity[];
   expenseStatistics: IExpenseStatistics[];
+  balanceHistory: IBalanceHistory[];
 }
 
 const initialState: IReportsState = {
   weeklyActivity: [],
   expenseStatistics: [],
+  balanceHistory: [],
 };
 
 export const reportsSlice = createSlice({
@@ -33,6 +41,9 @@ export const reportsSlice = createSlice({
     });
     builder.addCase(fetchExpenseStatistics.fulfilled, (state, action) => {
       state.expenseStatistics = action.payload;
+    });
+    builder.addCase(fetchBalanceHistory.fulfilled, (state, action) => {
+      state.balanceHistory = action.payload;
     });
   },
 });

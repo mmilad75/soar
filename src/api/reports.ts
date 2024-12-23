@@ -41,10 +41,31 @@ const fetchExpenseStatistics: FetchExpenseStatistics = async () => {
   };
 };
 
+// Expense Statistics
+export interface IBalanceHistory {
+  date: string;
+  balance: number;
+}
+
+interface IFetchBalanceHistoryResponse {
+  data: IBalanceHistory[];
+}
+
+type FetchBalanceHistory = () => Promise<IFetchBalanceHistoryResponse>;
+
+const fetchBalanceHistory: FetchBalanceHistory = async () => {
+  const response = await apiClient.get('/reports/balance-history');
+
+  return {
+    data: response.data.data,
+  };
+};
+
 // API
 const reportsApi = {
   fetchWeeklyActivity,
   fetchExpenseStatistics,
+  fetchBalanceHistory,
 };
 
 export default reportsApi;
