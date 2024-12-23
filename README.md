@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Soar Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is bootstrapped with **Vite**. It leverages modern tools and libraries for efficient development and performance. Here's a brief overview of the key technologies used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite**: A modern build tool that provides faster development and build times compared to **create-react-app (CRA)**. Vite uses native ES modules in development and provides an optimized build process, making it a great choice for modern React apps.
+- **Redux Toolkit**: Simplifies global state management with less boilerplate and includes powerful features like slices and middleware.
+- **Mock Service Worker (MSW)**: Used for mocking API requests. The mock server is configured in `src/mocks/api`.
+- **Victory**: A charting library selected for its compatibility with React 19 and later. It is used as a replacement for `react-chartjs-2`, which doesn't support React 19 yet.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Setup and Run Instructions
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+- **Node.js** (version 16 or higher recommended)
+- **npm** or **yarn** (any package manager of your choice)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Running the project
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+1. Install dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
-```
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   This will start the Vite development server and the app will be available at `http://localhost:5173` by default.
+
+### Mock API
+
+- The project uses **Mock Service Worker (MSW)** to simulate API calls during development. The mock API is configured in `src/mocks/api`. It intercepts network requests and returns mock data, allowing you to develop and test without needing a live backend.
+
+- MSW is automatically activated during development. If you need to modify the mocked responses, update the files in `src/mocks/api`.
