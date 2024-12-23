@@ -1,10 +1,22 @@
-import { http, HttpResponse } from 'msw';
+import { delay, http, HttpResponse } from 'msw';
 import { cards } from './data/cards';
 import { transactions } from './data/transactions';
 import { balanceHistory, expenseStatistics, weeklyActivity } from './data/reports';
 import { frequentContacts } from './data/contacts';
+import { userProfile } from './data/auth';
 
 export const handlers = [
+  http.get('https://soar-api/profile', async () => {
+    await delay(1000);
+    return HttpResponse.json(
+      {
+        user: userProfile,
+      },
+      {
+        status: 200,
+      }
+    );
+  }),
   http.get('https://soar-api/credit-cards', ({ request }) => {
     const params = new URL(request.url).searchParams;
     const start = Number(params.get('start'));

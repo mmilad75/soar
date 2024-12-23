@@ -7,6 +7,7 @@ export default {
       lato: ['Lato', 'sans-serif'],
     },
     borderColor: {
+      transparent: 'transparent',
       sky: '#E6EFF5',
       'sky-darker': '#DFEAF2',
       danger: '#FF4B4A',
