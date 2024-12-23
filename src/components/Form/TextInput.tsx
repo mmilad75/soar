@@ -18,7 +18,7 @@ const TextInput: React.FC<ITextInputProps> = ({ label, name, error, required, ..
       )}
       <input
         className={classNames(
-          'block w-full outline-0 py-4 px-5 border rounded-15px text-input text-secondary placeholder-base',
+          'block w-full outline-none py-4 px-5 border rounded-15px text-input text-secondary placeholder-base transition focus:border-primary focus:border-2',
           error && 'border-danger',
           !error && 'border-sky-darker'
         )}

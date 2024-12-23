@@ -10,6 +10,7 @@ export default {
       sky: '#E6EFF5',
       'sky-darker': '#DFEAF2',
       danger: '#FF4B4A',
+      primary: '#343C6A',
     },
     backgroundColor: {
       base: '#FFFFFF',
