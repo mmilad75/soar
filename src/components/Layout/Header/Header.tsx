@@ -5,6 +5,9 @@ import { openSidebar } from '@/store/slices/uiSlice';
 import { Avatar } from '@/components/common';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store';
+import HeaderSearch from './HeaderSearch';
+import HeaderNotifications from './HeaderNotifications';
+import HeaderSettings from './HeaderSettings';
 
 const Header: React.FC = () => {
   const { user } = useSelector((state: RootState) => state.auth);
@@ -25,7 +28,19 @@ const Header: React.FC = () => {
       </button>
 
       <PageTitle />
-      <div>
+      <div className="flex items-center">
+        <div className="hidden mr-8 xl:block">
+          <HeaderSearch />
+        </div>
+
+        <div className="hidden mr-8 xl:block">
+          <HeaderSettings />
+        </div>
+
+        <div className="hidden mr-8 xl:block">
+          <HeaderNotifications />
+        </div>
+
         <Avatar size="medium" src={user?.avatar ?? ''} />
       </div>
     </header>

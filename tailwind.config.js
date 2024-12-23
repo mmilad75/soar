@@ -14,6 +14,7 @@ export default {
       primary: '#343C6A',
     },
     backgroundColor: {
+      transparent: 'transparent',
       base: '#FFFFFF',
       gray: '#F5F7FA',
       dark: '#232323',
@@ -38,6 +39,7 @@ export default {
     },
     placeholderColor: {
       base: '#a0abbd',
+      secondary: '#718EBF',
     },
     fill: {
       none: 'none',
@@ -47,6 +49,7 @@ export default {
       primary: '#343C6A',
       secondary: '#718EBF',
       light: '#FFFFFF',
+      blue: '#396AFF',
       payment: {
         card: '#FFBB38',
         paypal: '#396AFF',
@@ -81,6 +84,7 @@ export default {
       borderRadius: {
         '15px': 15,
         '25px': 25,
+        '40px': 40,
         '50px': 50,
       },
       padding: {

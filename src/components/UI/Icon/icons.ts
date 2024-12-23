@@ -13,6 +13,9 @@ import PaypalPaymentIcon from '@/assets/icons/paypal-payment.svg?react';
 import CardPaymentIcon from '@/assets/icons/card-payment.svg?react';
 import ArrowRightIcon from '@/assets/icons/arrow-right.svg?react';
 import SendIcon from '@/assets/icons/send.svg?react';
+import BellIcon from '@/assets/icons/bell.svg?react';
+import GearIcon from '@/assets/icons/gear.svg?react';
+import SearchIcon from '@/assets/icons/search.svg?react';
 
 export const icons = {
   creditCard: CreditCardIcon,
@@ -30,6 +33,9 @@ export const icons = {
   cardStack: CardPaymentIcon,
   arrowRight: ArrowRightIcon,
   send: SendIcon,
+  bell: BellIcon,
+  gear: GearIcon,
+  search: SearchIcon,
 };
 
 export type IconName = keyof typeof icons;
