@@ -11,9 +11,9 @@ const TabTitle: React.FC<ITabTitleProps> = ({ title, active, onClick }) => {
     <div
       className={classNames(
         'relative mr-16 pb-2 px-4 font-medium cursor-pointer',
-        'transition hover:text-base',
+        'transition hover:text-body',
         !active && 'text-secondary ',
-        active && 'text-base'
+        active && 'text-body'
       )}
       onClick={onClick}
     >

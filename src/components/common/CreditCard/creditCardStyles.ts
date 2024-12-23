@@ -9,9 +9,9 @@ export const creditCardStyles = (active: boolean, className?: string) => {
       className
     ),
     topBar: 'flex items-center justify-between mb-8',
-    balance: classNames('text-[16px] lg:text-xl font-semibold leading-6', !active && 'text-primary'),
+    balance: classNames('text-base lg:text-xl font-semibold leading-6', !active && 'text-primary'),
     detailsTitle: 'text-[10px] lg:text-xs uppercase opacity-70',
-    detailsValue: classNames('text-[13px] lg:[text-16px] font-semibold leading-6', !active && 'text-primary'),
+    detailsValue: classNames('text-[13px] lg:text-base font-semibold leading-6', !active && 'text-primary'),
     cardNumberWrapper: classNames('py-5 px-6', active && 'card-number-bg', !active && 'border-t border-sky-darker'),
     cardNumber: classNames('font-medium lg:text-h2', !active && 'text-primary'),
     shape: classNames(

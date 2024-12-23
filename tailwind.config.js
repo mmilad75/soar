@@ -29,7 +29,7 @@ export default {
       primary: '#343C6A',
     },
     textColor: {
-      base: '#232323',
+      body: '#232323',
       subdued: '#B1B1B1',
       primary: '#343C6A',
       secondary: '#718EBF',

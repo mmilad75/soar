@@ -22,8 +22,8 @@ const SidebarNavItem: React.FC<ISidebarNavItemProps> = ({ title, icon, to, isAct
     'relative group transition',
     'flex items-center',
     'px-10 py-4 mb-1 ',
-    isActive && 'text-base fill-base',
-    !isActive && 'text-subdued fill-subdued hover:fill-base hover:text-base'
+    isActive && 'text-body fill-base',
+    !isActive && 'text-subdued fill-subdued hover:fill-base hover:text-body'
   );
 
   const indicatorClassNames = classNames(

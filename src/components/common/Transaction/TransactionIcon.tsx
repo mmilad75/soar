@@ -41,7 +41,7 @@ const TransactionIcon: React.FC<ITransactionIconProps> = ({ source }) => {
   return (
     <div
       className={classNames(
-        'flex items-center justify-center w-[55px] h-[55px] rounded-full bg-gray',
+        'flex items-center justify-center w-[50px] h-[50px] lg:w-[55px] lg:h-[55px] rounded-full bg-gray',
         props.background,
         props.color
       )}
