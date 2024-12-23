@@ -1,4 +1,4 @@
-import { IWeeklyActivity } from '@/api/reports';
+import { IExpenseStatistics, IWeeklyActivity } from '@/api/reports';
 
 export const weeklyActivity: IWeeklyActivity[] = [
   {
@@ -36,4 +36,11 @@ export const weeklyActivity: IWeeklyActivity[] = [
     withdraw: 400,
     deposit: 320,
   },
+];
+
+export const expenseStatistics: IExpenseStatistics[] = [
+  { label: 'Entertainment', value: 30 },
+  { label: 'Bill Expense', value: 15 },
+  { label: 'Investment', value: 20 },
+  { label: 'Others', value: 35 },
 ];

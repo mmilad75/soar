@@ -21,8 +21,30 @@ const fetchWeeklyActivity: FetchWeeklyActivity = async () => {
   };
 };
 
+// Expense Statistics
+export interface IExpenseStatistics {
+  label: string;
+  value: number;
+}
+
+interface IFetchExpenseStatisticsResponse {
+  data: IExpenseStatistics[];
+}
+
+type FetchExpenseStatistics = () => Promise<IFetchExpenseStatisticsResponse>;
+
+const fetchExpenseStatistics: FetchExpenseStatistics = async () => {
+  const response = await apiClient.get('/reports/expense-statistics');
+
+  return {
+    data: response.data.data,
+  };
+};
+
+// API
 const reportsApi = {
   fetchWeeklyActivity,
+  fetchExpenseStatistics,
 };
 
 export default reportsApi;
