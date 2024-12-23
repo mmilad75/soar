@@ -19,10 +19,16 @@ const initialState: IAuthState = {
   loading: true,
 };
 
-export const transactionsSlice = createSlice({
+export const authSlice = createSlice({
   name: 'transactions',
   initialState,
-  reducers: {},
+  reducers: {
+    setAvatar(state, action) {
+      if (!state.user) return;
+
+      state.user.avatar = action.payload.image;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchUser.pending, (state) => {
       state.loading = true;
@@ -34,4 +40,6 @@ export const transactionsSlice = createSlice({
   },
 });
 
-export default transactionsSlice.reducer;
+export default authSlice.reducer;
+
+export const { setAvatar } = authSlice.actions;

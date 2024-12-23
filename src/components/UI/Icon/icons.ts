@@ -16,6 +16,7 @@ import SendIcon from '@/assets/icons/send.svg?react';
 import BellIcon from '@/assets/icons/bell.svg?react';
 import GearIcon from '@/assets/icons/gear.svg?react';
 import SearchIcon from '@/assets/icons/search.svg?react';
+import PencilIcon from '@/assets/icons/pencil.svg?react';
 
 export const icons = {
   creditCard: CreditCardIcon,
@@ -36,6 +37,7 @@ export const icons = {
   bell: BellIcon,
   gear: GearIcon,
   search: SearchIcon,
+  pencil: PencilIcon,
 };
 
 export type IconName = keyof typeof icons;

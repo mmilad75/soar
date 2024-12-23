@@ -1,8 +1,8 @@
-import { Avatar } from '@/components/common';
 import { TextInput } from '@/components/Form';
 import { RootState } from '@/store';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
+import SettingsProfileAvatar from './SettingsProfileAvatar';
 
 type ProfileFormData = {
   fullName: string;
@@ -32,8 +32,8 @@ const SettingsEditProfile: React.FC = () => {
 
   return (
     <div className="lg:flex">
-      <div className="shrink-0 lg:mr-14 mb-6 text-center">
-        <Avatar size="xLarge" src="/images/christina.jpg" />
+      <div className="shrink-0 lg:mr-14 mb-6">
+        <SettingsProfileAvatar avatar={user?.avatar} />
       </div>
       <div className="flex-grow">
         <form onSubmit={onSubmit}>
