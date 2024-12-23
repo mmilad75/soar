@@ -49,6 +49,10 @@ const CreditCard: React.FC<ICreditCardProps> = ({ card, balance, active = false,
       <div className={styles.cardNumberWrapper}>
         <div className="flex justify-between">
           <div className={styles.cardNumber}>{formattedCardNumber}</div>
+          <div className="shrink-0">
+            <span className={styles.shape}></span>
+            <span className={styles.shape + ' -ml-4'}></span>
+          </div>
         </div>
       </div>
     </div>

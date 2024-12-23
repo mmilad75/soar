@@ -24,6 +24,7 @@ export default {
         cash: '#DCFAF8',
       },
       sky: '#EDF1F7',
+      'sky-dark': '#9199AF',
       primary: '#343C6A',
     },
     textColor: {

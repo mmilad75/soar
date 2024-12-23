@@ -14,5 +14,10 @@ export const creditCardStyles = (active: boolean, className?: string) => {
     detailsValue: classNames('font-semibold leading-6', !active && 'text-primary'),
     cardNumberWrapper: classNames('py-5 px-6', active && 'card-number-bg', !active && 'border-t border-sky-darker'),
     cardNumber: classNames('font-medium text-h2', !active && 'text-primary'),
+    shape: classNames(
+      'inline-block w-[30px] h-[30px]  opacity-50 rounded-full',
+      active && 'bg-base',
+      !active && 'bg-sky-dark'
+    ),
   };
 };
