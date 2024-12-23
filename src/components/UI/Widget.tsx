@@ -23,7 +23,7 @@ const Widget: React.FC<React.PropsWithChildren<IWidgetProps>> = ({
 
   return (
     <section>
-      <header className="flex justify-between mb-5">
+      <header className="flex justify-between items-center mb-5">
         <h2 className="text-primary text-h1 font-semibold capitalize">{title}</h2>
         {extra}
       </header>
