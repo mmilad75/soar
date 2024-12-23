@@ -3,7 +3,7 @@ import classNames from 'classnames';
 export const creditCardStyles = (active: boolean, className?: string) => {
   return {
     wrapper: classNames(
-      'font-lato rounded-25px',
+      'font-lato max-w-[350px] rounded-25px',
       active && 'credit-card-bg text-light',
       !active && 'text-secondary bg-base border border-sky-darker',
       className

@@ -23,8 +23,8 @@ const CardsWidget: React.FC = () => {
     <Widget title="My Cards" extra={seeAllButton} transparent>
       <div className="flex">
         {cards.map(({ id, balance, active, ...card }) => (
-          <div key={id} className="w-1/2 mr-4 last:mr-0">
-            <CreditCard className="" balance={balance} card={card} active={active} />
+          <div key={id} className="mr-4 last:mr-0">
+            <CreditCard className="w-[350px]" balance={balance} card={card} active={active} />
           </div>
         ))}
       </div>
